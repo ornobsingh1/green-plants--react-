@@ -13,9 +13,10 @@ const Plant = ({ plant, handleVisitedPlants }) => {
   return (
     <div
       className={`rounded-3xl shadow-xl overflow-hidden 
-      transition-all duration-300 border backdrop-blur-sm
-      ${visited ? "border-green-500 bg-green-100/60 scale-[1.03]" : "border-pink-300 bg-white"} 
-      hover:shadow-2xl hover:scale-[1.03]`}
+        transition-all duration-300 border backdrop-blur-sm
+        ${visited ? "border-green-500 bg-green-100/60 scale-[1.03]" : "border-pink-300 bg-white"} 
+        hover:shadow-2xl hover:scale-[1.03]
+        w-full max-w-sm mx-auto`}
     >
       {/* Image Section */}
       <div className="relative">
@@ -24,8 +25,8 @@ const Plant = ({ plant, handleVisitedPlants }) => {
         {/* Floating Badge */}
         <span
           className="absolute top-4 left-4 px-4 py-1 bg-white/70 
-          backdrop-blur-md text-pink-700 font-semibold text-sm 
-          rounded-full shadow"
+            backdrop-blur-md text-pink-700 font-semibold text-sm 
+            rounded-full shadow"
         >
           {category}
         </span>
@@ -42,11 +43,11 @@ const Plant = ({ plant, handleVisitedPlants }) => {
         <button
           onClick={handleVisited}
           className={`w-full py-2 mt-4 font-semibold rounded-full shadow-md 
-          transition-all duration-300 
-          ${visited 
-            ? "bg-green-600 text-white hover:bg-green-700" 
-            : "bg-pink-500 text-white hover:bg-pink-600"
-          }`}
+            transition-all duration-300 
+            ${visited 
+              ? "bg-green-600 text-white hover:bg-green-700" 
+              : "bg-pink-500 text-white hover:bg-pink-600"
+            }`}
         >
           {visited ? "Visited 🌿" : "Mark as Visited"}
         </button>
